@@ -1,22 +1,22 @@
-export const addTodo=(data)=>{
-    return{
-        type:"ADD_TODO",
-        payload:{
-            id:new Date().getTime.toString(),
-            data:data
+import { v4 as uuidv4 } from "uuid";
 
-        }}
-
-    }
-export const deleteTodo=(id)=>{
-    return{
-        type:"DELETE_TODO",
-        id
-    }
-}
-export const removeTodo=()=>{
-    return{
-        type:"REMOVE_TODO"
-    }
-
-}
+export const addTodo = (data) => {
+  return {
+    type: "ADD_TODO",
+    payload: {
+      id: uuidv4(),
+      data,
+    },
+  };
+};
+export const deleteTodo = (deleteId) => {
+  return {
+    type: "DELETE_TODO",
+    payload: deleteId,
+  };
+};
+export const removeTodo = () => {
+  return {
+    type: "REMOVE_TODO",
+  };
+};
