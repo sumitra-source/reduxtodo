@@ -1,25 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { userAction } from "./redux/actions/userAction";
-import User from "./component/User";
+import { Fragment } from "react";
+import BodyCompnent from "./Components/BodyCompnent";
+import FooterComponent from "./Components/FooterComponent";
+import Navbar from "./Components/Navbar";
+import "./App.css";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
-  const dispatch = useDispatch();
-  const userList = useSelector((state) => state.userList);
-  const { loading, users, error } = userList;
-  useEffect(() => {
-    dispatch(userAction());
-  }, [dispatch]);
   return (
-    <div className="App">
-      <h1>Redux thunk tutorial</h1>
-      {loading ? (
-        <h2>Loading...</h2>
-      ) : error ? (
-        <h2>{error}</h2>
-      ) : (
-        <User users={users} />
-      )}
-    </div>
+    <Fragment>
+      <ToastContainer autoClose={1500} />
+      <Navbar />
+      <BodyCompnent />
+      <FooterComponent />
+    </Fragment>
   );
 }
 
