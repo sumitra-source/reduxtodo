@@ -1,18 +1,24 @@
-import { Fragment } from "react";
-import BodyCompnent from "./Components/BodyCompnent";
-import FooterComponent from "./Components/FooterComponent";
-import Navbar from "./Components/Navbar";
+import React from "react";
 import "./App.css";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Forms from "./components/Forms";
+import TodoList from "./components/TodoList";
+import Title from "./components/Title";
+
 function App() {
   return (
-    <Fragment>
-      <ToastContainer autoClose={1500} />
-      <Navbar />
-      <BodyCompnent />
-      <FooterComponent />
-    </Fragment>
+    <div className="container">
+      <div className="app-wrapper">
+        <div>
+          <Title />
+        </div>
+        <div>
+          <Forms />
+        </div>
+        <div>
+          <TodoList />
+        </div>
+      </div>
+    </div>
   );
 }
 
