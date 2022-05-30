@@ -1,23 +1,11 @@
-import React from "react";
 import "./App.css";
-import Forms from "./components/Forms";
-import TodoList from "./components/TodoList";
-import Title from "./components/Title";
-
+import Home from "./pages/home/Home";
 function App() {
   return (
-    <div className="container">
-      <div className="app-wrapper">
-        <div>
-          <Title />
-        </div>
-        <div>
-          <Forms />
-        </div>
-        <div>
-          <TodoList />
-        </div>
-      </div>
+    <div className="App">
+      <div className="blur" style={{ top: "-18%", right: "0" }}></div>
+      <div className="blur" style={{ top: "36%", Left: "-8rem" }}></div>
+      <Home />
     </div>
   );
 }

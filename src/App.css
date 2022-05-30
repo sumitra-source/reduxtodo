@@ -1,112 +1,45 @@
-* {
-  margin: 0;
-  padding: 0;
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: rgba(36, 45, 73, 0.65);
+  --profileShadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
+  --hrColor: #cfcdcd;
+  --cardColor: rgba(255, 255, 255, 0.64);
+  --buttonBg: linear-gradient(98.63deg, #f9a225 0%, #f95f35 100%);
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --photo: #4cb256;
+  --video: #4a4eb7;
+  --location: #ef5757;
+  --shedule: #e1ae4a;
 }
-/* App.js */
-.container {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh; */
-  background: linear-gradient(to right bottom, #f8edeb, #fdf4ec);
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.App {
+  overflow: hidden;
+  color: var(--black);
+  background: #f3f3f3;
+  padding: 1rem 1rem;
 }
-.app-wrapper {
-  background-color: #ffb5a7;
-  min-width: 450px;
-  min-height: 650px;
-  padding: 30px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  box-shadow: 3px 6px 40px #000;
-  margin-bottom: 10px;
-}
-.title h1 {
-  color: #fffffc;
-  text-align: center;
-  margin: 30px 0;
-}
-.task-input {
-  outline: none;
-  width: 260px;
-  padding: 15px;
-  margin-right: 25px;
-  font-size: 20px;
-  color: rgb(105, 99, 99);
-  background-color: #fffffc;
-  border: 1px solid #f8edeb;
-  border-radius: 10px;
-}
-.button-add {
-  width: 70px;
-  padding: 15px 15px;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 0;
-  background-color: #f8edeb;
-  cursor: pointer;
-}
-.list-item {
-  display: flex;
-  margin: 20px 0;
-  border: 1px solid #fffffc;
-  border-radius: 10px;
-  padding: 10px;
-  max-height: 30px;
-}
-.button-complete,
-.button-delete,
-.button-edit {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 28px;
+.blur {
+  position: absolute;
+  width: 22rem;
+  height: 14rem;
   border-radius: 50%;
+  background: #a6ddf0;
+  filter: blur(72px);
 }
-.button-complete {
-  color: #e97171;
-  margin-right: 10px;
-}
-.button-edit {
-  color: #f8f1b0;
-  margin-right: 10px;
-}
-.button-delete {
-  color: rgb(194, 250, 179);
-}
-.complete {
-  text-decoration-style: solid;
-  text-decoration-line: line-through;
-  text-decoration-color: #fffffc;
-  opacity: 0.6;
-
+.button {
   display: flex;
-  margin: 20px 0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 10px;
-  max-height: 30px;
-}
-.list {
-  width: 220px;
-  background-color: #ffb5a7;
+  align-items: center;
+  justify-content: center;
+  color: white;
   border: none;
-  color: #fffffc;
-  font-size: 20px;
-  padding-left: 10px;
-  margin-right: 15px;
+  border-radius: 0.5rem;
+  background: var(--buttonBg);
+  transition: all 100ms ease-out;
 }
-.list:focus {
-  background-color: #fcd5ce;
-  border-radius: 10px;
-}
-input:focus,
-button:focus {
-  outline: none;
+.button:hover {
+  cursor: pointer;
+  color: var(--orange);
+  background: transparent;
+  border: 2px solid var(--orange);
 }
