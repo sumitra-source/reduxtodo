@@ -1,6 +1,6 @@
 import React from "react";
-import PostShare from "../PostShared/PostShare";
 import Posts from "../Posts/Posts";
+import PostShare from "../PostShare/PostShare";
 import "./PostSide.css";
 const PostSide = () => {
   return (
